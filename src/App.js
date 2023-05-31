@@ -4,9 +4,15 @@ import NavBar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+
+const height = {
+  height: '100dvh'
+}
+
   return (
-    <div className="App">
+    <div  className="App">
      <NavBar />
+     
     </div>
   );
 }

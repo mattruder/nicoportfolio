@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Form, Col, Button, Container, Row } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom"
 
@@ -33,9 +33,9 @@ function NavBar() {
       width: "100%",
       zIndex: "100",
       paddingBottom: "10px",
-      padding: "10px",
-      height: '10vh',
+      padding: "10px"
     }
+
 
     
 
@@ -92,12 +92,12 @@ function NavBar() {
   return (
     <div>
         
-        <Navbar style={sticky} bg="dark" variant="dark" expand="lg">
-      <Container>
+        <Navbar collapseOnSelect style={sticky} bg="dark" variant="dark" expand="lg">
+      
         <Navbar.Brand>Kevin Ruder</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
             <Nav.Link >Skills/Techniques</Nav.Link>
             <Nav.Link >Experience/Education</Nav.Link>
             <Nav.Link >Publications</Nav.Link>
@@ -105,7 +105,7 @@ function NavBar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+    
     </Navbar>
 
     <Modal show={showModal} onHide={handleClose}>
