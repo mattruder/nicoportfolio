@@ -1,38 +1,57 @@
 .App {
   text-align: center;
+  /* background-image: url('./images/kittens.jpg');
+  background-size: 100%;
+  background-repeat: repeat-x;
+  height: 100dvh */
+
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg {
+  background-color: lightgray;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-area {
+  height: 10dvh
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  height: 90dvh;
+
+}
+
+.image-pos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-area {
+  padding-top: 10dvh;
+  width: 80dvw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.kevin-button:hover {
+  cursor: pointer
+}
+
+.info-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollboy {  
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: justify;
+  position: relative
+}
+
+.headshot-image {
+  width: 30dvw;
+  height: auto;
 }
