@@ -8,6 +8,8 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom"
+import { Link, animateScroll as scroll } from "react-scroll";
+import './App.css'
 
 
 
@@ -18,10 +20,18 @@ const initialFormData = Object.freeze({
     query: ""
   });
 
-function NavBar() {
+function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, scrollToSkills, scrollToTechniques}) {
+
+  const handleScroll = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
     const [formData, updateFormData] = useState(initialFormData);
-
+  
     
     const [showModal, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -74,9 +84,9 @@ function NavBar() {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        const templateId = 'template_3irx4km';
-        const serviceID = "service_bpdmgcd";
-        const publicKey = "viC7jQKxx99O3NagW";
+        const templateId = 'TEMPLATE_ID_HERE';
+        const serviceID = "SERVICE_ID_HERE";
+        const publicKey = "PUBLIC_KEY_HERE";
         if (formData.name && formData.mobile && formData.email && formData.query) {
             sendFeedback(serviceID, templateId, { from_name: formData.name, mobile: formData.mobile, message: formData.query, email: formData.email }, publicKey)
             alert(`Thank you for your message. Your query has been forwarded.`);
@@ -94,14 +104,16 @@ function NavBar() {
         
         <Navbar collapseOnSelect style={sticky} bg="dark" variant="dark" expand="lg">
       
-        <Navbar.Brand>Kevin Ruder</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Brand className="kevin-button" onClick={() => window.scrollTo({top: 0})}>Kevin Ruder</Navbar.Brand>
+        <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link >Skills/Techniques</Nav.Link>
-            <Nav.Link >Experience/Education</Nav.Link>
-            <Nav.Link >Publications</Nav.Link>
-            <Nav.Link onClick={handleShow}>Contact
+          <Nav className="mr-auto" navbarScroll>
+            <Nav.Link eventKey="1"onClick={() => handleScroll(scrollToSkills.current)}to="skills">Skills</Nav.Link>
+            <Nav.Link eventKey="2"onClick={() => handleScroll(scrollToTechniques.current)}to="techniques">Techniques</Nav.Link>
+            <Nav.Link eventKey="3"onClick={() => handleScroll(scrollToExperience.current)} to="experience">Experience</Nav.Link>
+            <Nav.Link eventKey="4"onClick={() => handleScroll(scrollToPublications.current)}to="publications">Publications</Nav.Link>
+            <Nav.Link eventKey="5"onClick={() => handleScroll(scrollToEducation.current)}>Education</Nav.Link>
+            <Nav.Link eventKey="6"onClick={handleShow}>Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -144,12 +156,13 @@ function NavBar() {
         </Container>
         </Modal.Body>
         <Modal.Footer>
+        <Button onClick={handleClose} variant="outline" className="formButtonStyle" >
+                Close
+                </Button>
         <Button onClick={handleSubmit} variant="outline" className="formButtonStyle" type="submit">
                 Submit
                 </Button>
-                <Button onClick={handleClose} variant="outline" className="formButtonStyle" >
-                Close
-                </Button>
+                
         </Modal.Footer>
         
       </Modal>
