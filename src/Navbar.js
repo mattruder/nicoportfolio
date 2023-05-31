@@ -27,6 +27,18 @@ function NavBar() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const sticky={
+      position: 'fixed',
+      top: "0",
+      width: "100%",
+      zIndex: "100",
+      paddingBottom: "10px",
+      padding: "10px",
+      height: '10vh',
+    }
+
+    
+
 
     const formStyles = {
      
@@ -78,19 +90,18 @@ function NavBar() {
       };
 
   return (
-    <div  >
+    <div>
         
-        <Navbar bg="light" expand="lg">
+        <Navbar style={sticky} bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand>Kevin Ruder</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link >Skills/Techniques</Nav.Link>
+            <Nav.Link >Experience/Education</Nav.Link>
+            <Nav.Link >Publications</Nav.Link>
             <Nav.Link onClick={handleShow}>Contact
-            
-
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -98,8 +109,8 @@ function NavBar() {
     </Navbar>
 
     <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Header>
+          <Modal.Title>Contact</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Container fluid >
@@ -125,9 +136,6 @@ function NavBar() {
                 <Form.Label>Information*</Form.Label>
                 <Form.Control required onChange={handleChange} name="query" placeholder="Please Type Query Here" as="textarea" rows={8} />
             </Form.Group>
-    <div  className="d-flex align-items-center justify-content-center">
-           
-                </div>
                 </div>
         </Form >
                 </Col>
