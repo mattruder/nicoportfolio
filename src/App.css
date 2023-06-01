@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* background-image: url('./images/kittens.jpg');
+  /* ;
   background-size: 100%;
   background-repeat: repeat-x;
   height: 100dvh */
@@ -9,9 +9,10 @@
 }
 
 .bg {
-  background-color: lightgray;
-  background-repeat: repeat-y;
+  background-image: url('./images/kittens.jpg');
+  background-repeat: repeat-x;
   background-attachment: fixed;
+  background-size: contain;
 }
 
 .nav-area {
@@ -32,6 +33,7 @@
 .text-area {
   padding-top: 10dvh;
   width: 80dvw;
+  text-align: left;
 }
 
 .kevin-button:hover {
@@ -54,4 +56,38 @@
 .headshot-image {
   width: 30dvw;
   height: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .card-sizing {
+    width: 50dvw;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+.line-break {
+  border: 10px solid black
+}
+
+.download-link {
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #212529;
+  padding: 10px;
+  color: white;
+  background-color: #212529;
+  border-radius: 5px;
+}
+
+.download-link:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.contact-btn {
+  color: white;
 }
