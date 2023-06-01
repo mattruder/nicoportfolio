@@ -1,11 +1,12 @@
 import Card from 'react-bootstrap/Card';
+import './App.css'
 
 function Techniques() {
   return (
     <div>
     <Card>
       <Card.Body>
-        <Card.Title>Techniques</Card.Title>
+        <Card.Title className="title">Techniques</Card.Title>
         <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae dui ultrices, pellentesque libero in, elementum mauris. Fusce condimentum pretium nunc, ut elementum ex. Aliquam ultrices iaculis molestie. Aenean gravida est ligula, in aliquet urna aliquam a. Suspendisse sapien enim, iaculis sed molestie eu, venenatis nec lorem. Donec luctus, justo non viverra feugiat, libero nulla dapibus dui, ac ornare nisi odio ut ante. Quisque sollicitudin feugiat augue eu rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Aliquam rhoncus orci eu porttitor gravida. Proin ullamcorper imperdiet accumsan. Vivamus viverra feugiat lacus vel sodales. Etiam sagittis libero id orci convallis egestas sed vel libero. In ultricies scelerisque lobortis. Pellentesque cursus euismod varius. Proin eu magna nec erat posuere convallis id et tellus. Curabitur et turpis eros. Fusce vitae sem sagittis, aliquet erat venenatis, fermentum sem.

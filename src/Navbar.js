@@ -113,7 +113,7 @@ function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, sc
             <Nav.Link eventKey="3"onClick={() => handleScroll(scrollToExperience.current)} to="experience">Experience</Nav.Link>
             <Nav.Link eventKey="4"onClick={() => handleScroll(scrollToPublications.current)}to="publications">Publications</Nav.Link>
             <Nav.Link eventKey="5"onClick={() => handleScroll(scrollToEducation.current)}>Education</Nav.Link>
-            <Nav.Link eventKey="6"onClick={handleShow}>Contact
+            <Nav.Link  eventKey="6"onClick={handleShow}>Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

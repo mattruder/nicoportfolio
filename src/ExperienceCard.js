@@ -1,18 +1,56 @@
 import Card from 'react-bootstrap/Card';
+import './App.css'
+import cv from './docs/kevin-ruder-cv.pdf'
 
 function Experience() {
   return (
     <div>
     <Card>
       <Card.Body>
-        <Card.Title>Experience</Card.Title>
-        <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae dui ultrices, pellentesque libero in, elementum mauris. Fusce condimentum pretium nunc, ut elementum ex. Aliquam ultrices iaculis molestie. Aenean gravida est ligula, in aliquet urna aliquam a. Suspendisse sapien enim, iaculis sed molestie eu, venenatis nec lorem. Donec luctus, justo non viverra feugiat, libero nulla dapibus dui, ac ornare nisi odio ut ante. Quisque sollicitudin feugiat augue eu rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-Aliquam rhoncus orci eu porttitor gravida. Proin ullamcorper imperdiet accumsan. Vivamus viverra feugiat lacus vel sodales. Etiam sagittis libero id orci convallis egestas sed vel libero. In ultricies scelerisque lobortis. Pellentesque cursus euismod varius. Proin eu magna nec erat posuere convallis id et tellus. Curabitur et turpis eros. Fusce vitae sem sagittis, aliquet erat venenatis, fermentum sem.
-
-Fusce non condimentum orci. Nunc vitae porttitor enim, a imperdiet libero. Nunc ultrices orci ac sodales varius. Proin aliquam consectetur nunc at aliquet. Phasellus purus mi, ultrices at volutpat ac, sagittis ac lorem. Cras lacus lacus, maximus non arcu gravida, sollicitudin ultrices odio. Curabitur at posuere mi. Morbi sed mi suscipit, mollis lectus at, luctus sem. Phasellus laoreet, sapien sit amet lacinia tincidunt, massa lacus interdum justo, et cursus dui sem nec felis. Vivamus sed velit laoreet, sollicitudin est eget, commodo felis. Nam non interdum nunc, in imperdiet neque. Maecenas bibendum, quam id pretium sagittis, dolor velit maximus augue, id ullamcorper mauris quam cursus metus. Integer at nulla dui. Maecenas porta sapien at metus aliquam porta.
-
-Duis molestie dapibus placerat. Mauris efficitur interdum condimentum. Cras non bibendum lorem, ac imperdiet ex. Sed eu erat tempor, bibendum urna vel, sodales odio. Aliquam quam nunc, sodales sed ante vel, sollicitudin porttitor tortor. Quisque in viverra nisl. Pellentesque porttitor nisl quam, in maximus neque maximus id. Phasellus ex sem, rhoncus non urna nec, volutpat viverra mi. Integer aliquet consequat lorem, quis ornare neque ornare sit amet.</Card.Text>
+        <Card.Title className="title">Experience</Card.Title>
+        <Card.Text>
+          <div className="title" >
+        <a className="download-link" href={cv} download>Download CV</a>
+        </div>
+        <hr></hr>
+          <p><b>Francis I. Proctor Foundation, University of California San Francisco - Heintz Laboratory</b></p>
+          <p><em>Study Coordinator/Staff Research Associate 2:</em> Dr. Thuy Doan | August 2019 - Present</p>
+          <ul>
+            <li>Coordinated multiple international research studies and clinical trials for ocular diseases.</li>
+            <li>Worked with international health agencies and physicians to secure governmental and academic
+regulatory approval for clinical research studies.</li>
+            <li>Obtained Informed Consent from patients to be enrolled in clinical trials and research studies.</li>
+            <li>Maintained finances, generated subcontracts, wrote consent forms, in addition to developing
+patient database management for projects.</li>
+            <li>Prepared DNA/RNA from ocular, nasal, and rectal samples for metagenomic deep sequencing.</li>
+            <li>Developed varying protocols for the Heintz Laboratory including macrolide resistance, library
+preparation, qPCR, as well as protocols and study design for international sites.</li>
+            <li>Trained and managed new lab members, summer interns, and medical students.</li>
+          </ul>
+          <hr></hr>
+          <p><b>Washington Animal Disease Diagnostic Laboratory - Washington State University</b> Pullman, WA</p>
+          <p><em>Microbiologist 1:</em>James Thompson | July 2018-July 2019</p>
+          <ul>
+            <li>Developed ELISA SOP for detection of R. salmoninarum in USFWS specimens.</li>
+            <li>Screened and identified bacterial pathogens relating to aquaculture specimens for certification
+and diagnostic cases.</li>
+            <li>Experienced in tissue processing, slide reading, stain/media/slide preparation and proper
+laboratory documentation.</li>
+          </ul>
+          <hr></hr>
+          <p><b>The University of Texas John Ring LaMontagne Center for Infectious Disease</b> Austin, TX</p>
+          <p><em>Undergraduate Research Assistant:</em> Dr. Marvin Whiteley | January 2017-August 2017</p>
+          <ul>
+            <li>Ordered library construction of Pseudomonas putida mutants from transposon mutagenesis for
+future experimentation.</li>
+            <li>Performed Tn-seq on library of P. putida mutants for screening of unique insertion mutants to test
+mutational coverage in the P. putida genome with Cartesian, Pooling-Coordinate Sequencing (CP-
+CSeq) of mutants to confirm lack of redundancy.</li>
+            <li>Developed a test for biofilm formation of P. putida in soil.</li>
+            <li>Performed electroporation of Cherry Red and GFP plasmids into P. putida to examine biofilm
+formation and fitness.</li>
+          </ul>
+        </Card.Text>
       </Card.Body>
     </Card>
     </div>
