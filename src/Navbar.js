@@ -159,7 +159,7 @@ function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, sc
         <Button onClick={handleClose} variant="outline" className="formButtonStyle" >
                 Close
                 </Button>
-        <Button onClick={handleSubmit} variant="outline" className="formButtonStyle" type="submit">
+        <Button onClick={handleSubmit} variant="dark" className="submitButton" type="submit">
                 Submit
                 </Button>
                 

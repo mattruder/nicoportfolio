@@ -123,3 +123,9 @@
   height: 100px;
 }
 
+.submitButton {
+  color: white;
+  background-color: #212529;
+  padding: 10px;
+  border: 10px solid red;
+}
