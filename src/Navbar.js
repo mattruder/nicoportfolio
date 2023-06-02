@@ -20,13 +20,13 @@ const initialFormData = Object.freeze({
     query: ""
   });
 
-function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, scrollToSkills, scrollToTechniques}) {
+function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, scrollToSkills, scrollToCats, scrollToTop}) {
 
   const handleScroll = (ref) => {
     window.scrollTo({
-      top: ref.offsetTop,
+      top: ref,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
@@ -104,16 +104,16 @@ function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, sc
         
         <Navbar collapseOnSelect style={sticky} bg="dark" variant="dark" expand="lg">
       
-        <Navbar.Brand className="kevin-button" onClick={() => window.scrollTo({top: 0})}>Kevin Ruder</Navbar.Brand>
+        <Navbar.Brand className="kevin-button" onClick={() => handleScroll(scrollToTop.current.scrollIntoView())}>Kevin Ruder</Navbar.Brand>
         <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" navbarScroll>
-            <Nav.Link eventKey="1"onClick={() => handleScroll(scrollToSkills.current)}to="skills">Skills</Nav.Link>
-            <Nav.Link eventKey="2"onClick={() => handleScroll(scrollToTechniques.current)}to="techniques">Techniques</Nav.Link>
-            <Nav.Link eventKey="3"onClick={() => handleScroll(scrollToExperience.current)} to="experience">Experience</Nav.Link>
-            <Nav.Link eventKey="4"onClick={() => handleScroll(scrollToPublications.current)}to="publications">Publications</Nav.Link>
-            <Nav.Link eventKey="5"onClick={() => handleScroll(scrollToEducation.current)}>Education</Nav.Link>
-            <Nav.Link  eventKey="6"onClick={handleShow}>Contact
+            <Nav.Link eventKey="1"onClick={() => handleScroll(scrollToSkills.current.scrollIntoView())}to="skills">Skills/Techniques</Nav.Link>
+            <Nav.Link eventKey="3"onClick={() => handleScroll(scrollToExperience.current.scrollIntoView())} to="experience">Experience</Nav.Link>
+            <Nav.Link eventKey="4"onClick={() => handleScroll(scrollToPublications.current.scrollIntoView())}to="publications">Publications</Nav.Link>
+            <Nav.Link eventKey="5"onClick={() => handleScroll(scrollToEducation.current.scrollIntoView())}>Education</Nav.Link>
+            <Nav.Link eventKey="6"onClick={() => handleScroll(scrollToCats.current.scrollIntoView())}>Cats</Nav.Link>
+            <Nav.Link  eventKey="7"onClick={handleShow}><div className="contact-btn">Contact</div>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -56,7 +56,7 @@ Mar;136:104759. doi: 10.1016/j.jcv.2021.104759. Epub 2021 Feb 11. PMID: 33609933
 PMC7954984.</p>
           <hr></hr>
           <p>Oldenburg CE, Hinterwirth A, Worden L, Sié A, Dah C, Ouermi L, Coulibaly B, Zhong L, Chen C,
-<b>Ruder K, </b>Lietman TM, Keenan JD, Doan T. Indirect effect of oral azithromycin on the gut resistome of
+<b> Ruder K, </b>Lietman TM, Keenan JD, Doan T. Indirect effect of oral azithromycin on the gut resistome of
 untreated children: a randomized controlled trial. Int Health. 2021 Feb 24;13(2):130-134. doi:
 10.1093/inthealth/ihaa029. PMID: 32556194; PMCID: PMC7902679.</p>
         </Card.Text>
