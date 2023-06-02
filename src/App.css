@@ -4,19 +4,18 @@
   background-size: 100%;
   background-repeat: repeat-x;
   height: 100dvh */
-
-  
 }
 
 .bg {
-  background-image: url('./images/kittens.jpg');
-  background-repeat: repeat-x;
-  background-attachment: fixed;
-  background-size: contain;
+  background-image: url('./images/treeskevin.jpg');
+  height: 100vh;
+  background-attachment: scroll;
+ 
 }
 
 .nav-area {
-  height: 10dvh
+  height: 10dvh;
+  padding-bottom: 20px;
 }
 
 .content {
@@ -44,13 +43,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .scrollboy {  
   overflow-x: hidden;
   overflow-y: scroll;
+  
   text-align: justify;
-  position: relative
+  
 }
 
 .headshot-image {
@@ -60,7 +61,16 @@
 
 @media only screen and (max-width: 576px) {
   .card-sizing {
-    width: 50dvw;
+    width: 75dvw;
+  }
+
+  .cat-area {
+    height: 75dvh;
+    width: 75dvw;
+  }
+
+  .cat-size {
+    height: 20vh;
   }
 }
 
@@ -89,5 +99,25 @@
 }
 
 .contact-btn {
-  color: white;
+  color: lightgreen;
+}
+
+.cat-area {
+  padding-top: 10dvh;
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding-bottom: 10dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-size {
+  height: 75vh;
+  width: auto;
+}
+
+.extra-space {
+  height: 100px;
 }

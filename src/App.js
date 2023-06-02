@@ -14,6 +14,7 @@ import { useRef } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import NabiscoCarousel from './CatCarousel';
 
 function App() {
 const scrollToSkills = useRef(null)
@@ -21,30 +22,35 @@ const scrollToTechniques = useRef(null)
 const scrollToExperience = useRef(null)
 const scrollToEducation = useRef(null)
 const scrollToPublications = useRef(null)
+const scrollToCats = useRef(null)
+const scrollToTop = useRef(null)
 
 const handleScroll = (ref) => {
   window.scrollTo({
-    top: ref.offsetTop,
+    top: ref,
     left: 0,
     behavior: "smooth",
   });
 };
 
   return (
-    <div  className="App bg">
-      <div className="nav-area">
+    <div  className="App bg scrollboy">
+      <div className="nav-area"  ref={scrollToTop}>
      <NavBar 
+    
      handleScroll={handleScroll}
      scrollToExperience={scrollToExperience}
      scrollToSkills={scrollToSkills}
      scrollToTechniques={scrollToTechniques}
      scrollToEducation={scrollToEducation}
      scrollToPublications={scrollToPublications}
+     scrollToCats={scrollToCats}
+     scrollToTop={scrollToTop}
      />
      </div>
-     <div className="content ">
+     <div className="content  ">
       <div className="image-pos">
-      <Card fluid className="card-sizing">
+      <Card fluid className="card-sizing" >
       <Card.Img variant="top" src={headshot} />
       <Card.Body>
         <Card.Title>Kevin Ruder</Card.Title>
@@ -55,21 +61,27 @@ const handleScroll = (ref) => {
     </Card>
   
      </div>
-     <div className="info-area bg">
-     <div className="text-area"ref={scrollToSkills}>
+     <div className="info-area ">
+     <div className="text-area "ref={scrollToSkills}>
      <Skills />
      </div>
      {/* <div className="text-area" ref={scrollToTechniques}>
      <Techniques />
      </div> */}
-     <div className="text-area" ref={scrollToExperience}>
+     <div className="text-area " ref={scrollToExperience}>
      <Experience  />
      </div>
-     <div className="text-area" ref={scrollToPublications}>
+     <div className="text-area " ref={scrollToPublications}>
      <Publications  />
      </div>
-     <div className="text-area" ref={scrollToEducation}>
+     <div className="text-area " ref={scrollToEducation}>
      <Education  />
+     </div>
+     <div className="cat-area " ref={scrollToCats}>
+     <NabiscoCarousel />
+     </div>
+     <div className="extra-space ">
+     <p></p>
      </div>
      </div>
      
