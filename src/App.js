@@ -55,10 +55,11 @@ const handleScroll = (ref) => {
       </div>
     
     <div className="text-area">
-    <Card   >
+    <Card>
      
       <Card.Body >
-      
+      <Card.Title className="title">Kevin Ruder</Card.Title>
+      <hr></hr>
         <Card.Text >
         I am a medical research study coordinator. I work with clinician scientists at the Proctor Foundation and abroad to design, approve, and execute clinical research studies and trials. I currently work as part of a research team in the Ralph and Sophie Heintz laboratory to recruit and consent participants, obtain ethical approvals, implement contracts, maintain finances, and process data for seven projects with over 45 international sites. In addition, I also participate in the wet laboratory to process samples for deep sequencing and develop new protocols to efficiently identify infectious agents and biomarkers for ocular inflammatory diseases.
         </Card.Text>
