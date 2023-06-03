@@ -84,9 +84,9 @@ function NavBar({scrollToExperience, scrollToEducation, scrollToPublications, sc
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        const templateId = 'TEMPLATE_ID_HERE';
-        const serviceID = "SERVICE_ID_HERE";
-        const publicKey = "PUBLIC_KEY_HERE";
+        const templateId = 'template_3rd7t4k';
+        const serviceID = "service_rcv9mvj";
+        const publicKey = "r7IlTXBIoemWOQwcS";
         if (formData.name && formData.mobile && formData.email && formData.query) {
             sendFeedback(serviceID, templateId, { from_name: formData.name, mobile: formData.mobile, message: formData.query, email: formData.email }, publicKey)
             alert(`Thank you for your message. Your query has been forwarded.`);
