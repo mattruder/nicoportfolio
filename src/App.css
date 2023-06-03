@@ -4,6 +4,7 @@
   background-size: 100%;
   background-repeat: repeat-x;
   height: 100dvh */
+  font-family: Verdana, sans-serif;
 }
 
 .bg {
@@ -59,16 +60,20 @@
   height: auto;
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 765px) {
   .card-sizing {
-    width: 75vw;
+    width: 100dvw;
     height: auto;
   }
   
-  
+  .image-size {
+    width: 50vw;
+  }
   
   .card-text-sizing {
-    width: 75vw;
+    width: 100vw;
+    height: auto;
+    border: 2px solid red
   }
 
   .cat-area {
