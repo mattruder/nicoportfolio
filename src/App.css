@@ -59,9 +59,16 @@
   height: auto;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 567px) {
   .card-sizing {
-    width: 75dvw;
+    width: 75vw;
+    height: auto;
+  }
+  
+  
+  
+  .card-text-sizing {
+    width: 75vw;
   }
 
   .cat-area {
@@ -72,6 +79,8 @@
   .cat-size {
     height: 20vh;
   }
+
+ 
 }
 
 .title {
@@ -123,3 +132,20 @@
   height: 100px;
 }
 
+.submitButton {
+  color: white;
+  background-color: #212529;
+  padding: 10px;
+  border: 10px solid red;
+}
+
+.card-sizing {
+  width: 40vw;
+  height: auto;
+}
+
+
+
+.card-text-sizing {
+  width: 50vw;
+}
